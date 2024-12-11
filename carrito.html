@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos</title>
 </head>
 <body>
+    <link rel="stylesheet" href="style.css">
+
+    <header>
     
+        <h1 class="titulo_principal">Tienda de productos UMNARA</h1>
+        <div id="carrito">
+            <button>Ver carrito (0)</button>
+        </div>
+    </header>  
+
+    <main id="productos">
+        <!-- Aquí se cargarán los productos dinámicamente desde script.js -->
+    </main>
+
+    <aside>
+        <h2>Carrito de compras</h2>
+        <div id="ContenidoCarrito">
+        </div>
+        <h3 id="totalaPagar">Total a pagar: $0</h3>
+        <button>Pagar con PayPal</button>
+    </aside>
+    
+    <script src="script.js"></script>
 </body>
 </html>
