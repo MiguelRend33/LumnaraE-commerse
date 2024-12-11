@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="TodosUTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Tienda de productos LumnaraE</h1>
+        <p>¡Tu aventura deportiva comienza aquí! En nuestra tienda, cada producto ha sido seleccionado con cuidado para ofrecerte lo mejor en calidad y rendimiento. No solo garantizamos que encuentres lo que necesitas, sino que lo harás al mejor precio del mercado. Equípate con lo más innovador y duradero, y lleva tu pasión al siguiente nivel. ¡Porque tu esfuerzo merece solo lo mejor!<br></p>
+        <div id="carrito">
+                <button onclick="toggleCarrito()">Ver carrito (<span id="cantidadCarrito">0</span>) </button>
+        </div>
+    </header>
+
+    <main id="productos">
+
+    </main>
+
+    <aside id="carritoContainer" class="oculto">
+        <h2>Carrito de compras</h2>
+        <div id="contenidoCarrito">
+
+        </div>
+        <h3 id="totalAPagar">Total a pagar: $0</h3>
+        <button onclick="pagar()">Pagar con paypal</button>
+    </aside>
+    
+    <script src="script.js"></script>
+</body>
+</html>
