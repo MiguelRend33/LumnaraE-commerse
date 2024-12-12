@@ -1,17 +1,17 @@
 
 const productos = [
-    {id: 1, nombre: 'Camiseta deportiva casual', precio: 58000, imagen: 'imagenes/casal.jpg'},
-    {id: 2, nombre: 'Paquete de 5 busos deportivos', precio: 149900, imagen: 'imagenes/conjunt5.jpg', descripcion: 'Cinco busos ideales para cualquier actividad deportiva.'},
-    {id: 3, nombre: 'Conjunto deportivo gris', precio: 200000, imagen: 'imagenes/conjunto2.jpg'},
-    {id: 4, nombre: 'Chaqueta deportiva exclusiva', precio: 250000, imagen: 'imagenes/exclusivo.jpg'},
-    {id: 5, nombre: 'Pantalón deportivo ajustado', precio: 300000, imagen: 'imagenes/excluspant.jpg'},
-    {id: 6, nombre: 'Uniforme de fútbol completo', precio: 350000, imagen: 'imagenes/futbol.jpg'},
-    {id: 7, nombre: 'Pantalón negro deportivo', precio: 400000, imagen: 'imagenes/negropant.jpg'},
-    {id: 8, nombre: 'Paquete de 3 camisetas deportivas', precio: 450000, imagen: 'imagenes/pack3.jpg', descripcion: 'Tres camisetas transpirables y cómodas para entrenar.'},
-    {id: 9, nombre: 'Jogger deportivo clásico', precio: 500000, imagen: 'imagenes/pantal.jpg'},
-    {id: 10, nombre: 'Pantaloneta azul para entrenamiento', precio: 754000, imagen: 'imagenes/pantaloneta.jpg'},
-    {id: 11, nombre: 'Saco deportivo de algodón', precio: 235000, imagen: 'imagenes/saco.jpg'},
-    {id: 12, nombre: 'Sudadera única edición limitada', precio: 876000, imagen: 'imagenes/unica.jpg'}
+    {id: 1, nombre: 'Camiseta deportiva casual', precio: 58000, imagen: './CarritoCompras/imagenes/casal.jpg'},
+    {id: 2, nombre: 'Paquete de 5 busos deportivos', precio: 149900, imagen: './CarritoCompras/imagenes/conjunt5.jpg', descripcion: 'Cinco busos ideales para cualquier actividad deportiva.'},
+    {id: 3, nombre: 'Conjunto deportivo gris', precio: 200000, imagen: './CarritoCompras/imagenes/conjunto2.jpg'},
+    {id: 4, nombre: 'Chaqueta deportiva exclusiva', precio: 250000, imagen: './CarritoCompras/imagenes/exclusivo.jpg'},
+    {id: 5, nombre: 'Pantalón deportivo ajustado', precio: 300000, imagen: './CarritoCompras/imagenes/excluspant.jpg'},
+    {id: 6, nombre: 'Uniforme de fútbol completo', precio: 350000, imagen: './CarritoCompras/imagenes/futbol.jpg'},
+    {id: 7, nombre: 'Pantalón negro deportivo', precio: 400000, imagen: './CarritoCompras/imagenes/negropant.jpg'},
+    {id: 8, nombre: 'Paquete de 3 camisetas deportivas', precio: 450000, imagen: './CarritoCompras/imagenes/pack3.jpg', descripcion: 'Tres camisetas transpirables y cómodas para entrenar.'},
+    {id: 9, nombre: 'Jogger deportivo clásico', precio: 500000, imagen: './CarritoCompras/imagenes/pantal.jpg'},
+    {id: 10, nombre: 'Pantaloneta azul para entrenamiento', precio: 754000, imagen: './CarritoCompras/imagenes/pantaloneta.jpg'},
+    {id: 11, nombre: 'Saco deportivo de algodón', precio: 235000, imagen: './CarritoCompras/imagenes/saco.jpg'},
+    {id: 12, nombre: 'Sudadera única edición limitada', precio: 876000, imagen: './CarritoCompras/imagenes/unica.jpg'}
 ];
 
 
