@@ -6,6 +6,232 @@ body {
     margin: 0;
     padding: 0;
 }
+/* Navegación de index */
+.nav{
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #8B4513;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.nav .div .span{
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #8B4513;
+    color: #fff;
+}
+
+.Quiensomos{
+    text-align: center;
+    padding: 20px;
+    display: flex;
+}
+/* ¿Botón quien somos' */
+.Quiensomos .quienSomos{
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px 10px;
+    background-color: #D2691E;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.Quiensomos .quienSomos:hover{
+    background-color: #A0522D;
+}
+/* Sección Quiénes Somos */
+#Quiensomos {
+    background-color: #fff; /* Fondo blanco para contraste */
+    padding: 50px 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sutil sombra para darle profundidad */
+}
+
+/* Título principal */
+.quienSo h1 {
+    font-size: 2.5em;
+    color: #8B4513; /* Marrón oscuro */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Botón Quiénes Somos */
+.quienSomos {
+    background-color: #D2691E; /* Marrón intermedio */
+    color: #fff; /* Texto blanco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.quienSomos:hover {
+    background-color: #8B4513; /* Oscurecer al pasar el mouse */
+}
+
+/* Párrafo del texto */
+.texto {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #000;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+/* Ver el catalogo */
+.catalogo {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.catalogo h2 {
+    font-size: 1.5em;
+    color: #8B4513;
+}
+
+.producto {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+.producto img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.ver-carrito {
+    background-color: #D2691E;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+.ver-carrito:hover {
+    background-color: #8B4513;
+}
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo de los contenedores de formulario */
+.formulario {
+    background-color: #fff;
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: 30px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.formulario .contenido-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.formulario h2 {
+    color: #8B4513;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Estilos de los inputs */
+input[type="text"], textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+/* Estilo de los textos */
+input[type="text"]::placeholder, textarea::placeholder {
+    color: #888;
+}
+
+/* Estilo del botón de envío */
+button {
+    background-color: #D2691E;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #8B4513;
+}
+
+/* Estilo de los inputs al recibir foco */
+input[type="text"]:focus, textarea:focus {
+    outline: none;
+    border-color: #8B4513;
+}
+
+/* Estilo de los campos de texto (textarea) */
+textarea {
+    height: 200px;
+    resize: none;
+}
+
+/* Estilos para la columna de inputs */
+.fila {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.fila .col {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Estilos del formulario en pantallas pequeñas */
+@media (max-width: 768px) {
+    .fila {
+        flex-direction: column;
+    }
+
+    .fila .col {
+        width: 100%;
+    }
+}
+
+/* Estilo del botón de envío (overlay) */
+button span.overlay {
+    display: none;
+}
+
+/* Hover sobre el botón */
+button:hover span.overlay {
+    display: inline-block;
+}
+
 
 /* Encabezado */
 header {
