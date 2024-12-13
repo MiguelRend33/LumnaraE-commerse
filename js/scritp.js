@@ -1,3 +1,23 @@
+let showMenu = false;
+
+// Cambia la barra de navegación
+function showHideMenu() {
+    const navElement = document.getElementById("nav");
+
+    if (showMenu) {
+        navElement.classList.remove("responsive");
+        showMenu = false;
+    } else {
+        navElement.classList.add("responsive");
+        showMenu = true;
+    }
+}
+
+function selection() {
+    document.getElementById("nav").classList = "";
+    showMenu = false;
+}
+
 const productos = [
     {id: 1, nombre: 'Camiseta deportiva casual', precio: 58000, imagen: './CarritoCompras/imagenes/casal.jpg'},
     {id: 2, nombre: 'Paquete de 5 busos deportivos', precio: 149900, imagen: './CarritoCompras/imagenes/conjunt5.jpg', descripcion: 'Cinco busos ideales para cualquier actividad deportiva.'},
@@ -13,48 +33,47 @@ const productos = [
     {id: 12, nombre: 'Sudadera única edición limitada', precio: 876000, imagen: './CarritoCompras/imagenes/unica.jpg'}
 ];
 
-
-function mostrarProductos(){
+function mostrarProductos() {
     const contenedor = document.getElementById('productos');
-    //ciclo para recorrer productos y mostrarlos en contenedor
+    // Ciclo para recorrer productos y mostrarlos en contenedor
     productos.forEach(producto => {
-            const div = document.createElement('div');
-            div.className = 'producto';
-            div.innerHTML = `
+        const div = document.createElement('div');
+        div.className = 'producto';
+        div.innerHTML = `
             <img src="${producto.imagen}" alt="${producto.nombre}">
             <h2>${producto.nombre}</h2>
             <p>${producto.precio}</p>
             <button onclick="agregarAlCarrito(${producto.id})">Agregar al Carrito</button>
-            `;
-            contenedor.appendChild(div); 
+        `;
+        contenedor.appendChild(div);
     });
 }
 
 let carrito = [];
 
-function agregarAlCarrito(id){
-    //buscar id en la lista y devolver a constante producto
+function agregarAlCarrito(id) {
+    // Buscar id en la lista y devolver a constante producto
     const producto = productos.find(p => p.id === id);
-    //buscar en carrito si el producto ya esta
+    // Buscar en carrito si el producto ya está
     const itemEnCarrito = carrito.find(item => item.id === id);
 
-    if(itemEnCarrito){
+    if (itemEnCarrito) {
         itemEnCarrito.cantidad++;
-    }else{
-        carrito.push({ ...producto, cantidad : 1});
+    } else {
+        carrito.push({ ...producto, cantidad: 1 });
     }
 
     document.getElementById('cantidadCarrito').innerText = carrito.length;
     actualizarCarrito();
 }
 
-function toggleCarrito(){
+function toggleCarrito() {
     const contenidocarrito = document.getElementById('carritoContainer');
     contenidocarrito.classList.toggle('oculto');
     actualizarCarrito();
 }
 
-function actualizarCarrito(){
+function actualizarCarrito() {
     const contenidocarrito = document.getElementById('contenidoCarrito');
     contenidocarrito.innerHTML = '';
     let total = 0;
@@ -64,28 +83,28 @@ function actualizarCarrito(){
         total += subtotal;
 
         contenidocarrito.innerHTML += `
-        <div class="carrito-item">
-        <img src="${item.imagen}" alt="${item.nombre}">
-        <span>${item.nombre} - $ ${item.precio} x ${item.cantidad} = $ ${subtotal} </span>
-        <button onclick="quitarDelCarrito(${item.id})">Quitar</button>
-        </div>`;
+            <div class="carrito-item">
+                <img src="${item.imagen}" alt="${item.nombre}">
+                <span>${item.nombre} - $ ${item.precio} x ${item.cantidad} = $ ${subtotal}</span>
+                <button onclick="quitarDelCarrito(${item.id})">Quitar</button>
+            </div>`;
     });
 
     document.getElementById("totalAPagar").innerText = "Total a pagar $ " + total;
 
-    if(carrito.length === 0){
-        contenidocarrito.innerHTML = "<p>El carrito esta vacio</p>";
+    if (carrito.length === 0) {
+        contenidocarrito.innerHTML = "<p>El carrito está vacío</p>";
     }
 }
 
-function quitarDelCarrito(id){
+function quitarDelCarrito(id) {
     const index = carrito.findIndex(item => item.id === id);
 
-    if(index !== -1){
-        if(carrito[index].cantidad > 1){
+    if (index !== -1) {
+        if (carrito[index].cantidad > 1) {
             carrito[index].cantidad--;
-        }else{
-            carrito.splice(index,1);
+        } else {
+            carrito.splice(index, 1);
         }
     }
 
@@ -93,21 +112,23 @@ function quitarDelCarrito(id){
     actualizarCarrito();
 }
 
-function pagar(){
+function pagar() {
     window.location.href = "https://www.paypal.com";
 }
 
-//va al final para cargar la pagina los productos
-mostrarProductos();
-if(localStorage.contadorVisitas){
-    localStorage.contadorVisitas = parseInt(localStorage.contadorVisitas) + 1;
-}else{
-    localStorage.contadorVisitas = 1;
-}
-document.getElementById("conteoVisita").innerText = "Numero de visitas : " + localStorage.contadorVisitas;
+// Va al final para cargar la página los productos
+document.addEventListener("DOMContentLoaded", function() {
+    
 
-////
-////
+    if (localStorage.contadorVisitas) {
+        localStorage.contadorVisitas = parseInt(localStorage.contadorVisitas) + 1;
+    } else {
+        localStorage.contadorVisitas = 1;
+    }
+    document.getElementById("conteoVisita").innerText = "Número de visitas: " + localStorage.contadorVisitas;
+});
+mostrarProductos();
+
 function filtrarProductos() {
     const textoBusqueda = document.getElementById('barraBusqueda').value.toLowerCase(); // Obtener el texto ingresado
     const contenedor = document.getElementById('productos');

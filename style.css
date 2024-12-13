@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 /* General */
+/* hace que el html tenga un movimiento lento */
+html{
+scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -7,50 +12,63 @@ body {
     margin: 0;
     padding: 0;
 }
+
 /* Navegación de index */
-.nav{
-    text-align: center;
+.contenedor-header{
     font-family: Arial, sans-serif;
-    padding: 20px;
     background-color: #8B4513;
     color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
-
-.nav .div .span{
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    background-color: #8B4513;
-    color: #fff;
-}
-
-.Quiensomos{
-    text-align: center;
-    padding: 20px;
+.contenedor-header header {
+    max-width: auto;
+    margin: auto;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
 }
-/* ¿Botón quien somos' */
-.Quiensomos .quienSomos{
-    text-align: center;
-    margin-top: 10px;
-    padding: 10px 10px;
-    background-color: #D2691E;
+.contenedor-header header .logo a {
+    font-family: 'Righteous';
+    font-size: 36px ;
+    color: #000000;
+    text-decoration: none;
+}
+.contenedor-header header ul{
+    display: flex;
+    list-style: none;
+}
+.contenedor-header header nav ul li a{
+    text-align: none;
     color: #fff;
-    border: none;
+    margin: 0 15px ;
+    padding: 3px;
+    transition: 0.5s;
+    text-decoration: none;
+}
+/* resalta cuando se para en el cursor */
+.contenedor-header header nav ul li a:hover{
+    color: #A1D6B2;
+}
+.nav-responsive {
+    background-color:#1cb698;
+    color: #fff;
+    padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
+    display: none;
 }
-.Quiensomos .quienSomos:hover{
-    background-color: #A0522D;
-}
+
 /* Sección Quiénes Somos */
 #Quiensomos {
     background-color: #fff; /* Fondo blanco para contraste */
     padding: 50px 20px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sutil sombra para darle profundidad */
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Título principal */
@@ -59,6 +77,7 @@ body {
     color: #8B4513; /* Marrón oscuro */
     margin-bottom: 20px;
     font-weight: bold;
+    text-align: center;
 }
 
 /* Botón Quiénes Somos */
@@ -71,6 +90,8 @@ body {
     font-size: 1.2em;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .quienSomos:hover {
@@ -113,20 +134,31 @@ body {
     border: 1px solid #ddd;
     border-radius: 5px;
 }
-.ver-carrito {
+.catalogo .ver-carrito {
     background-color: #D2691E;
     color: #fff;
-    border: none;
+    border: 2px solid;
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
-    margin-top: 20px;
+    margin-top: 20px; 
+
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+
+    position: relative;
+    z-index: 1;
+    transition: 1s;
 }
 
 .ver-carrito:hover {
     background-color: #8B4513;
 }
+
+
+
 /* General */
 body {
     font-family: Arial, sans-serif;
@@ -339,6 +371,50 @@ header {
     display: none;
 }
 
+/*  */
+/*  */
+/* Estilos para el contenedor de slogan */
+.slogan-catalogo {
+    background-color: #ccc; /* Marrón oscuro */
+    color: #2c2b2b; /* Texto blanco */
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sutil sombra para darle profundidad */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* Estilos para el título */
+.slogan.catalogo h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-family: 'Righteous', sans-serif;
+}
+
+/* Estilos para el párrafo */
+.slogan.catalogo p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el botón del carrito */
+#carrito button {
+    background-color: #D2691E; /* Marrón intermedio */
+    color: #fff; /* Texto blanco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#carrito button:hover {
+    background-color: #A0522D; /* Oscurecer al pasar el mouse */
+}
+/* quien somos */
 
 .quienes-somos {
     color: #8b5e3c;
@@ -364,3 +440,79 @@ header {
     border: 3px solid #d6c4aa;
     border-radius: 8px;
 }
+
+/*footer  */
+footer {
+    background-color:#a07956;
+    color: #fff;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+footer .redes a{
+    color:#fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+footer .redes a:hover{
+    background-color: #A0522D;
+}
+footer .arriba{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #efb810;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+}
+/* permite el espaciadoentre iconos */
+footer .redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los contactos */
+}
+
+footer .contacto a {
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Responsive */
+@media screen and (max-width:980px){
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #252A2E;
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+}
+
