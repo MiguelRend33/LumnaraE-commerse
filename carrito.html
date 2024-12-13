@@ -12,27 +12,32 @@
 
         
          <!-- barra de navegación  -->
-    <nav class="contenedor-header">
-    <header>
-        <div class="logo">
-            <a href= "#"> Lumnara </a>
-        </div>
-        <nav id="nav">
-            <ul>
-                <li><a href="./index.html" onclick="selection()">INICIO</a></li>   
-                <li><a href="./quienesSomos.html" onclick="selection()" >SOBRE NOSOTROS</a></li>
-                <!-- <li><a href="./carrito.html" onclick="selection()">CATÁLOGO</a></li> -->
-                
-                <li class="nav-item">   
-                    <form class="d-flex" role="search">
-                        <input id="barraBusqueda" class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                        <button class="btn btn-outline-success" onclick="filtrarProductos()" type="submit">Buscar</button>
-                    </form>
-                </li>
-            </ul>
-        </nav>
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href= "#"> Lumnara </a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="./index.html" onclick="selection()">INICIO</a></li>   
+                    <li><a href="./quienesSomos.html" onclick="selection()" >SOBRE NOSOTROS</a></li>
+                    <!-- <li><a href="./carrito.html" onclick="selection()">CATÁLOGO</a></li> -->
+                     <li class="nav-item">   
+                        <form class="d-flex" role="search">
+                            <input id="barraBusqueda" class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                            <button class="btn btn-outline-success" onclick="filtrarProductos()" type="submit">Buscar</button>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+            <!-- incono cuando eseta en responsive  -->
+            <div class="nav-responsive" onclick="showHideMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
         </header>
-    </nav>
+    </div>
+
 
     <div class="slogan-catalogo">
         
@@ -67,10 +72,10 @@
                 <a href="https://www.linkedin.com/in/miguel-angel-rendon-atehortua-04946423a/" target="_blank">
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
-                <a href="atehortuam@gmail.com">
+                <a href="atehortuam@gmail.com" onclick="openInNewWindow('mailto:atehortuam@gmail.com')">
                     <i class="fa-solid fa-inbox"></i>
                 </a>
-                <a href="tel:+573222822024">
+                <a href="tel:+573222822024" onclick="openInNewWindow('tel:+573222822024')">
                     <i class="fa-solid fa-phone"></i>
                 </a>
             </div>
@@ -80,23 +85,23 @@
                 <a href="https://www.linkedin.com" target="_blank">
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
-                <a href="karoldvallejo322@gmail.com">
+                <a href="michellvallejo2000@gmail.com" onclick="openInNewWindow('mailto:michellvallejo2000@gmail.com')">
                     <i class="fa-solid fa-inbox"></i>
                 </a>
-                <a href="tel:+573113912786">
+                <a href="tel:+573113912786" onclick="openInNewWindow('tel:+573113912786')">
                     <i class="fa-solid fa-phone"></i>
                 </a>
             </div>
             <!-- Contacto Autor 3 -->
             <div class="contacto">
-                <h3>Sebastian Orozco</h3>
+                <h3>Sebastián Orozco</h3>
                 <a href="https://www.linkedin.com/in/autor1" target="_blank">
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
-                <a href="juansebastianorozcorios@gmail.com">
+                <a href="juansebastianorozcorios@gmail.com" onclick="openInNewWindow('mailto:juansebastianorozcorios@gmail.com')" >
                     <i class="fa-solid fa-inbox"></i>
                 </a>
-                <a href="tel:+573114460751">
+                <a href="tel:+573114460751" onclick="openInNewWindow('tel:+573114460751')">
                     <i class="fa-solid fa-phone"></i>
                 </a>
             </div>

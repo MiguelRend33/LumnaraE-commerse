@@ -18,7 +18,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #8B4513;
     color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 2px 4px rgba(190, 94, 16, 0.877); 
 }
 .contenedor-header header {
     max-width: auto;
@@ -51,7 +51,7 @@ body {
     color: #A1D6B2;
 }
 .nav-responsive {
-    background-color:#1cb698;
+    background-color:#3ab123;
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
