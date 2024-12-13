@@ -113,6 +113,7 @@ function quitarDelCarrito(id) {
 }
 
 function pagar() {
+    alert("Estas a punto de abandonar esta pagína")
     window.location.href = "https://www.paypal.com";
 }
 
