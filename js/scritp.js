@@ -1,4 +1,3 @@
-
 const productos = [
     {id: 1, nombre: 'Camiseta deportiva casual', precio: 58000, imagen: './CarritoCompras/imagenes/casal.jpg'},
     {id: 2, nombre: 'Paquete de 5 busos deportivos', precio: 149900, imagen: './CarritoCompras/imagenes/conjunt5.jpg', descripcion: 'Cinco busos ideales para cualquier actividad deportiva.'},
@@ -106,3 +105,34 @@ if(localStorage.contadorVisitas){
     localStorage.contadorVisitas = 1;
 }
 document.getElementById("conteoVisita").innerText = "Numero de visitas : " + localStorage.contadorVisitas;
+
+////
+////
+function filtrarProductos() {
+    const textoBusqueda = document.getElementById('barraBusqueda').value.toLowerCase(); // Obtener el texto ingresado
+    const contenedor = document.getElementById('productos');
+    contenedor.innerHTML = ''; // Limpiar el contenedor
+
+    const productosFiltrados = productos.filter(producto =>
+        producto.nombre.toLowerCase().includes(textoBusqueda)
+    );
+
+    if (productosFiltrados.length > 0) {
+        productosFiltrados.forEach(producto => {
+            const div = document.createElement('div');
+            div.className = 'producto';
+            div.innerHTML = `
+                <img src="${producto.imagen}" alt="${producto.nombre}">
+                <h2>${producto.nombre}</h2>
+                <p>${producto.precio}</p>
+                <button onclick="agregarAlCarrito(${producto.id})">Agregar al Carrito</button>
+            `;
+            contenedor.appendChild(div);
+        });
+    } else {
+        contenedor.innerHTML = '<p>No se encontraron productos.</p>';
+    }
+}
+
+// Escuchar el evento "input" para filtrar en tiempo real
+document.getElementById('barraBusqueda').addEventListener('input', filtrarProductos);
