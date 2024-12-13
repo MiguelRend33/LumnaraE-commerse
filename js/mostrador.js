@@ -20,3 +20,6 @@ function cargarVistaPrevia() {
 function abrirCarrito() {
     window.location.href = "./carrito.html"; // Cambia la ruta si es necesario
 }
+function abrirQuiensomos() {
+    window.location.href = "./quienesSomos.html"; // Cambia la ruta si es necesario
+}
