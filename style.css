@@ -338,25 +338,25 @@ header {
 }
 
 
-h1, h2 {
+.quienes-somos {
     color: #8b5e3c;
     text-align: center;
 }
 
-h3 {
+.viste-tu {
     color: #a07956;
     text-align: center;
     font-style: italic;
 }
 
-p {
+.somos {
     font-size: 16px;
     line-height: 1.6;
     margin: 15px 20px;
     text-align: justify;
 }
 
-img {
+.fotos {
     display: block;
     margin: 20px auto;
     border: 3px solid #d6c4aa;
